@@ -1,0 +1,158 @@
+    * {
+    font-family: 'NotoSans', sans-serif;
+}
+
+.btnDelete {
+    font-size: 15px;
+    font-family: 'Noto Sans', sans-serif;
+    border-radius: 70px;
+    background-color: #ff0000;
+    border: 0px;
+    color: #fff;
+    width: 90px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.bg-primary-color {
+    background-color: #0D1E30;
+}
+
+.bg-secondary-color {
+    background-color: #E8E7E4;
+}
+
+.bg-dark-color {
+    background-color: #0D1E30;
+}
+
+.primary-color {
+    color: #FFF;
+}
+
+.secondary-color {
+    color: #0D1E30;
+}
+
+#navbar a:hover {
+    color: #D53620;
+}
+
+.buttonLogin {
+    background-color: #FFF;
+    border: 0;
+    color: #0D1E30;
+    border-radius: 20px;
+    font-size: 1em;
+    margin-top: 5px;
+    margin-left: 0px;
+    width: 80px;
+    height: 35px;
+}
+
+.buttonLogin:hover {
+    background-color: #D53620;
+    transition: 0.5s;
+}
+
+#navbar a.active {
+    border-bottom: 1px solid #E8E7E4;
+    color: #FFF;
+}
+
+#navbar a.active:hover {
+    color: #D53620;
+}
+
+.navbar-brand {
+    display: flex;
+}
+
+.navbar-brand img {
+    width: 80px;
+    margin: -20px;
+}
+
+#navbar-items .navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+#navbar-items .nav-item {
+    margin: 0 1em;
+    font-size: 1em;
+}
+
+.titulo-gerenciar {
+    color: black;
+}
+
+.logoIMG {
+    width: 80px;
+}
+
+#footer {
+    padding: 1.5em 0.5em;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+#footer-top {
+    margin-bottom: 2em;
+}
+
+#footer-top, footer-top i {
+    color: #fff;
+}
+
+#social-icons {
+    text-align: center;
+}
+
+#social-icons i {
+    margin-left: 1em;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#social-icons i:hover {
+    color: #D53620;
+    transition: 0.3s;
+}
+
+#arrow-up {
+    text-align: left;
+}
+
+#arrow-up i {
+    cursor: pointer;
+    font-size: 3em;
+    margin-left: 380px;
+}
+    .imagem {
+        margin-top: 10px;
+    }
+    .btnCriar {
+    margin-top: 110px;
+    width: 127px;
+    height: 111px;
+        margin-bottom: 12.5px;
+}
+
+
+
+.btnCriar i {
+  font-size: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.containerBTN > a{
+    background-color: #B3B3B3;
+    border-color: #B3B3B3;
+}
+
+

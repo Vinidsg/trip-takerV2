@@ -1,0 +1,206 @@
+* {
+    
+}
+
+.bg-primary-color-dv {
+    background-color: #0D1E30;
+}
+
+.bg-secondary-color-dv {
+    background-color: #30C2FE;
+}
+
+.bg-gray-color-dv {
+    background-color: #E6E6E6;
+}
+
+.bg-third-color-dv {
+    background-color: #D53620
+}
+
+.primary-color-dv {
+    color: #0D1E30;
+}
+
+.secondary-color-dv {
+    color: #fff;
+}
+
+.third-color-dv {
+    color: #D53620
+}
+
+/*NAVBAR */
+
+/*Fotos*/
+
+.img-describe {
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+.img-describe img {
+    margin-bottom: 40px;
+    width: 1000px;
+}
+
+.img-describe h2 {
+    margin-bottom: 40px;
+}
+
+/*Descrição da viagem*/
+
+/*Tabela de preços*/
+
+.border-transp {
+    border-color: transparent;
+}
+
+#table-price {
+    margin-bottom: 20px;
+}
+
+#table-price button{
+    border-radius: 300px;
+    width: 200px;
+    justify-content: center;
+    margin-left: 150px;
+
+}
+
+.valor-viagem {
+    margin-top: 18px !important;
+    margin-left: 20px;
+    /*margin-right: 500px;*/
+}
+
+.valor-reserva {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.text-card {
+    font-weight: 500;
+    font-size: 1.2em;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.text-card-2 {
+    font-weight: 500;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.card-only-text {
+    padding: 10px;
+}
+
+/*Informações do guia*/
+
+#guia-information {
+    margin-bottom: 20px;
+}
+
+#guia-information img {
+    margin-top: 30px;
+    width: 300px;
+}
+
+
+
+/* Estilos específicos para cada tela */
+
+/*!* Desktop *!*/
+/*@media (min-width: 992px) {*/
+/*}*/
+
+/*!* Tablet *!*/
+/*    @media (min-width: 768px) and (max-width: 991px) {*/
+/*        !*NAVBAR*!*/
+/*        !*#navbar a:hover {*!*/
+/*        !*    color: #D53620;*!*/
+/*        !*}*!*/
+
+/*        !*.buttonLogin {*!*/
+/*        !*    background-color: #FFF;*!*/
+/*        !*    border: 0;*!*/
+/*        !*    color: #0D1E30;*!*/
+/*        !*    border-radius: 20px;*!*/
+/*        !*    font-size: 1em;*!*/
+/*        !*    margin-top: 5px;*!*/
+/*        !*    margin-left: 0px;*!*/
+/*        !*    width: 80px;*!*/
+/*        !*    height: 35px;*!*/
+/*        !*}*!*/
+
+/*        !*.buttonLogin:hover {*!*/
+/*        !*    background-color: #D53620;*!*/
+/*        !*    transition: 0.5s;*!*/
+/*        !*}*!*/
+
+/*        !*#navbar a.active {*!*/
+/*        !*    border-bottom: 1px solid #E8E7E4;*!*/
+/*        !*    color: #FFF;*!*/
+/*        !*}*!*/
+
+/*        !*#navbar a.active:hover {*!*/
+/*        !*    color: #D53620;*!*/
+/*        !*}*!*/
+
+/*        !*.navbar-brand {*!*/
+/*        !*    display: flex;*!*/
+/*        !*    align-items: center; !* Alinhar verticalmente o conteúdo da .navbar-brand *!*!*/
+/*        !*}*!*/
+
+/*        !*.navbar-brand img {*!*/
+/*        !*    width: 80px;*!*/
+/*        !*    margin: -20px;*!*/
+/*        !*}*!*/
+
+/*        !*#navbar-items .navbar-nav {*!*/
+/*        !*    flex-direction: column; !* Alterar para layout de coluna *!*!*/
+/*        !*    align-items: center; !* Alinhar verticalmente os itens *!*!*/
+/*        !*    width: 100%;*!*/
+/*        !*}*!*/
+
+/*        !*#navbar-items .nav-item {*!*/
+/*        !*    margin: 0.5em 0; !* Adicionar um espaço entre os itens *!*!*/
+/*        !*    font-size: 1em;*!*/
+/*        !*}*!*/
+
+/*        .img-describe img {*/
+/*            width: 500px;*/
+/*            margin-right: 110px !important;*/
+/*        }*/
+
+/*        #table-price button{*/
+/*            border-radius: 300px;*/
+/*            width: 200px;*/
+/*            justify-content: center;*/
+/*            margin-left: -119px;*/
+
+/*        }*/
+
+/*        .hamburguer {*/
+/*            margin-right: 200px;*/
+/*            overflow: hidden;*/
+/*        }*/
+/*    }*/
+
+/*!* Smartphone *!*/
+@media (max-width: 767px) {
+    .bi-arrow-up-circle {
+        display: none !important;
+    }
+
+    #table-price button {
+        margin-left: 82px;
+    }
+}
+
+
+
+
+

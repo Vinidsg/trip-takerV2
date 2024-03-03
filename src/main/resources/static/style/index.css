@@ -1,0 +1,301 @@
+* {
+    font-family: 'NotoSans', sans-serif;
+}
+
+.bg-primary-color {
+    background-color: #0D1E30;
+}
+
+.bg-secondary-color {
+    background-color: #E8E7E4;
+}
+
+.bg-dark-color {
+    background-color: #0D1E30;
+}
+
+.primary-color {
+    color: #FFF;
+}
+
+.secondary-color {
+    color: #0D1E30;
+}
+
+#navbar a:hover {
+    color: #D53620;
+}
+
+.buttonLogin {
+    background-color: #FFF;
+    border: 0;
+    color: #0D1E30;
+    border-radius: 20px;
+    font-size: 1em;
+    margin-top: 5px;
+    margin-left: 0px;
+    width: 80px;
+    height: 35px;
+}
+
+.buttonLogin:hover {
+    background-color: #D53620;
+    transition: 0.5s;
+}
+
+#navbar a.active {
+    border-bottom: 1px solid #E8E7E4;
+    color: #FFF;
+}
+
+#navbar a.active:hover {
+    color: #D53620;
+}
+
+.navbar-brand {
+    display: flex;
+}
+
+.navbar-brand img {
+    width: 80px;
+    margin: -20px;
+}
+
+#navbar-items .navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+#navbar-items .nav-item {
+    margin: 0 1em;
+    font-size: 1em;
+}
+
+#slider {
+    margin-bottom: 1em;
+}
+
+#slider .carousel-caption {
+    bottom: 3em;
+}
+
+#slider .carousel-caption h5 {
+    font-size: 3em;
+    text-shadow: #000 2px 2px;
+}
+
+.btn {
+    border-radius: 25px;
+}
+
+#slider .btn {
+    padding: 0.3 0.8em;
+    font-size: 1.5em;
+    margin-top: 1em;
+    background-color: #D53620;
+    border: 0;
+    width: 150px;
+}
+
+#slider .btn:hover {
+    background-color: #D3513F;
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+    color: E6E6E6;
+    font-size: 3em;
+}
+
+@media(min-width: 768px) {
+    #slider .carousel-caption {
+        bottom: 15em;
+    }
+
+    #slider .carousel-caption h5 {
+        font-size: 4em;
+        text-shadow: #000 2px 1px;
+    }
+
+    #slider .btn {
+        padding: 0.6 1.6em;
+        font-size: 1.5em;
+        background-color: #D53620;
+        border: 0;
+    }
+
+    .carousel-indicators {
+        bottom: 7em;
+    }
+}
+
+#mini-banners {
+    margin-bottom: 4em;
+}
+
+#mini-banners .card {
+    padding: 2em .03em;
+    border-radius: 0;
+    margin-bottom: 1em;
+}
+
+#mini-banners i {
+    font-size: 4em;
+}
+
+#mini-banners .card-title {
+    margin-botton: 1.5em;
+}
+
+#mini-banners .btn {
+    margin-top: 1.5em;
+    padding: 0.6em 1.2em;
+}
+
+@media(min-width: 768px) {
+    #mini-banners {
+        margin-top: -6em;
+    }
+}
+
+#featured-container {
+    margin-bottom: 4em;
+}
+
+.title {
+    font-size: 1.75em;
+    margin-bottom: 0.4em;
+    position: relative;
+}
+
+.title:before {
+    width: 75px;
+    border-top: 4px solid #D53620;
+    content: '';
+    position: absolute;
+    bottom: 2em;
+}
+
+#featured-images {
+    margin-top: 2em;
+}
+
+#featured-images .col-md-4 {
+    position: relative;
+    cursor: pointer;
+}
+
+#featured-images .col-md-4:hover > .banner-content {
+    opacity: 0.8;
+}
+
+#featured-images .banner-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+.img-fluid {
+    width: 1000px;
+    height: 700px;
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 2.4em;
+    }
+
+    .title:before {
+        bottom: 1.5em;
+    }
+
+    #featured-images .banner-content {
+        opacity: 0;
+    }
+}
+
+#info-content {
+    margin-bottom: 4em;
+    padding: 4em 1em;
+}
+
+#info-numbers {
+    margin: 1.5em 0;
+}
+
+#info-banner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5em;
+}
+
+#info-numbers h3 {
+    font-size: 3em;
+}
+
+@media(min-width: 768px) {
+    #info-content {
+        padding: 3.5em;
+
+
+    }
+}
+
+.logoIMG {
+    width: 80px;
+}
+
+#footer {
+    padding: 1.5em 0.5em;
+     position: relative;
+        bottom:0;
+        left:0;
+}
+
+#footer-top {
+    margin-bottom: 2em;
+}
+
+#footer-top, footer-top i {
+    color: #fff;
+}
+
+#social-icons {
+    text-align: center;
+}
+
+#social-icons i {
+    margin-left: 1em;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#social-icons i:hover {
+    color: #D53620;
+    transition: 0.3s;
+}
+
+#arrow-up {
+    text-align: left;
+}
+
+#arrow-up i {
+    cursor: pointer;
+    font-size: 3em;
+    margin-left: 380px;
+}
+.hamburguer
+{
+    color:#ffffff;
+}
