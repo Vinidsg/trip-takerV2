@@ -2,14 +2,15 @@ package com.senac.tripTaker.controller;
 
 import com.senac.tripTaker.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
 import jakarta.servlet.http.HttpSession;
 
-@Controller
+@RestController
 public class UserController {
 
     private final UserService userService;
@@ -19,32 +20,54 @@ public class UserController {
         this.userService = userService;
     }
 
+    // Este método pode ser removido ou substituído por uma API que retorna informações de status.
     @GetMapping("/login")
-    public String showLoginForm() {
-        return "login";
+    public ResponseEntity<Void> showLoginForm() {
+        // Pode retornar um status simples ou informações sobre como fazer login.
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @PostMapping("/login")
-    public String handleLogin(
-            @RequestParam("username") String username,
-            @RequestParam("password") String password,
-            HttpSession session,
-            RedirectAttributes redirectAttributes) {
-
-        boolean isValidUser = userService.verifyCredentials(username, password);
+    public ResponseEntity<String> handleLogin(@RequestBody UserCredentials credentials, HttpSession session) {
+        boolean isValidUser = userService.verifyCredentials(credentials.getUsername(), credentials.getPassword());
 
         if (isValidUser) {
-            session.setAttribute("username", username);
-            return "redirect:/gerenciar-trips"; // Ajuste conforme suas necessidades
+            session.setAttribute("username", credentials.getUsername());
+            // Retorna uma resposta indicando sucesso no login.
+            return ResponseEntity.ok("Login bem-sucedido.");
         } else {
-            redirectAttributes.addFlashAttribute("errorMessage", "Usuário ou Senha inválidos!");
-            return "redirect:/login";
+            // Retorna uma resposta indicando falha no login.
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Usuário ou Senha inválidos!");
         }
     }
 
     @GetMapping("/logout")
-    public String handleLogout(HttpSession session) {
+    public ResponseEntity<String> handleLogout(HttpSession session) {
         session.invalidate();
-        return "redirect:/login";
+        // Retorna uma resposta indicando que o logout foi bem-sucedido.
+        return ResponseEntity.ok("Logout bem-sucedido.");
+    }
+
+    // Classe interna para modelar as credenciais do usuário
+    private static class UserCredentials {
+        private String username;
+        private String password;
+
+        // Getters e setters
+        public String getUsername() {
+            return username;
+        }
+
+        public void setUsername(String username) {
+            this.username = username;
+        }
+
+        public String getPassword() {
+            return password;
+        }
+
+        public void setPassword(String password) {
+            this.password = password;
+        }
     }
 }
