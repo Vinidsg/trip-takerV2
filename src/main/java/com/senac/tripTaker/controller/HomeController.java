@@ -9,7 +9,7 @@ import java.util.Map;
 @RestController
 public class HomeController {
 
-    @GetMapping("/")
+    @GetMapping("/home")
     public Map<String, Object> index() {
         Map<String, Object> response = new HashMap<>();
         response.put("message", "Bem-vindo à API TripTaker!");
@@ -17,3 +17,5 @@ public class HomeController {
         return response; // Retorna um objeto JSON com informações de boas-vindas
     }
 }
+
+
