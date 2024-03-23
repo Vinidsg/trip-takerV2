@@ -1,6 +1,8 @@
 # Trip-Taker
 Repositório destinado ao trabalho do Projeto Integrador V do SENAC, no qual consiste na refatoração do código já existente da aplicação do projeto Trip Taker. O projeto inicial foi feito utilizando as tecnologias do Java Servlet juntamento com o JSP, utilizando o padrão arquitetural MVC. 
-Neste projeto, será implementado o padrão de arquitetura REST, utilizando o Framework Spring. O grupo contém 5 integrantes: 
+Neste projeto, será implementado o padrão de arquitetura REST, utilizando o Framework Spring. 
+
+O grupo contém 6 integrantes: 
 
 - Vinicius de Souza Garcia
 - Vinicius Lima Alves
