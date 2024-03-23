@@ -135,10 +135,67 @@ margin-top:100px;
 }
 
 
+/* Edição da listagem de viagens do Javascript */
 
 
 
+.container-button{
+    display: flex;
+    justify-content: end;
+}
+.buttonAgendar {
+    background-color: #D53620;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttonAgendar:hover {
+    background-color: #0D1E30;
+    color: #FFFFFF;
+}
+
+.buttonAgendar:active {
+    background-color: #0D1E30;
+    color: #FFFFFF;
+}
+
+.container-button{
+    padding-left: 20vw;
+}
 
 
+.coluna-card-horizontal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.coluna-card-horizontal-second{
+    display: flex;
+    flex-direction: row;
+    margin-top: 4vh;
+}
+
+.coluna-card-vertical-second{
+    display: flex;
+    flex-direction: column;
+}
+.coluna-card-vertical-second{
+    display: flex;
+    flex-direction: column;
+}
+
+.coluna-card-horizontal-second-column-value{
+    display: flex;
+    flex-direction: row;
+    margin-top: 4vh;
+    padding-left: 34%;
+}
 
 
+.second-container{
+    display: flex;
+    flex-direction: row;
+}
