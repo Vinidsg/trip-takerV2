@@ -13,44 +13,83 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-    <link rel="stylesheet" th:href="@{/style/gerenciarRotas.css}">
+
+    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/gerenciarRotas.css">
+    <script src="script/script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </head>
 <body class="d-flex flex-column min-vh-100">
-    <!-- Navbar content here -->
-    
-    <div class="container my-5">
-        <div class="containerBTN">
-            <a th:href="@{/createEditTrip}" class="btn btn-secondary btnCriar">
-                <i class="bi bi-plus"></i> Criar Nova
-            </a>
-        </div>
 
-        <div class="row imagem">
-            <div th:each="trip : ${trips}" class="col-md-4">
-                <div class="card mb-3">
-                    <a th:href="@{'/createEditTrip/' + ${trip.id}}">
-                        <img th:src="@{${trip.image}}" alt="Imagem da Viagem" class="card-img-top">
-                    </a>
-                    <div class="card-body">
-                        <form th:action="@{/delete-trip}" method="post">
-                            <input type="hidden" name="id" th:value="${trip.id}">
-                            <button type="submit" class="btn btn-danger">Deletar</button>
-                        </form>
+<nav class="navbar navbar-expand-lg fixed-top bg-primary-color" id="navbar">
+    <div class="container py-3">
+        <a href="#" class="navbar-brand primary-color">
+            <img src="img/logo.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-items" aria-controls="navbar-items" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-items">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a href="home.html" class="nav-link primary-color">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/find-all-trips" class="nav-link active primary-color" aria-current="page">Rotas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="sobre.html" class="nav-link primary-color">Sobre</a>
+                </li>
+            </ul>
+            <button href="#" class="buttonLogin btn-primary" id="loginBtn">Login</button>
+        </div>
+    </div>
+</nav>
+<!-- Navbar content here -->
+
+<div class="container my-5">
+    <div class="containerBTN">
+        <a th:href="@{/createEditTrip}" class="btn btn-secondary btnCriar">
+            <i class="bi bi-plus"></i> Criar Nova
+        </a>
+    </div>
+
+    <div class="row imagem">
+
+    </div>
+</div>
+
+<footer class="container-fluid bg-primary-color fixed-bottom" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12" id="footer-top">
+                <div class="row justify-content-between">
+                    <div class="col-4">
+                        <img src="img/logo.png" alt="Logo" class="logoIMG">
+                    </div>
+                    <div class="col-4" id="social-icons">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-youtube"></i>
+                        <i class="bi bi-twitter"></i>
+                    </div>
+                    <div class="col-4" id="arrow-up">
+                        <i class="bi bi-arrow-up-circle"></i>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</footer>
 
-    <!-- Footer content here -->
+<!-- Footer content here -->
 
-    <script th:src="@{/script/script.js}"></script>
-    <script>
-      document.getElementById("loginBtn").addEventListener("click", function() {
+
+<script>
+    document.getElementById("loginBtn").addEventListener("click", function() {
         window.location.href = "/logout";
-      });
-    </script>
+    });
+</script>
 </body>
 </html>
