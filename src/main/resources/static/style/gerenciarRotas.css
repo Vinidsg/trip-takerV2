@@ -95,7 +95,7 @@
 
 #footer {
     padding: 1.5em 0.5em;
-    position: relative;
+    position: fixed;
     bottom: 0;
     left: 0;
 }
