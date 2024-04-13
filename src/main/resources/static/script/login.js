@@ -17,8 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             if (response.ok) {
-                // Redirect to another page or show success message
-                alert('Login bem-sucedido!');
+                window.location.href = 'LOGINSUCESSO.html'; // Redireciona para a página de sucesso
             } else {
                 const message = await response.text();
                 alert('Falha no login: ' + message);

@@ -42,4 +42,14 @@ public class LoginController {
         // Retorna um objeto JSON indicando que o logout foi bem-sucedido.
         return ResponseEntity.ok().body(Map.of("message", "Logout bem-sucedido."));
     }
+
+    @PostMapping("/register")
+    public ResponseEntity<?> registerUser(@RequestBody User user) {
+        try {
+            User registered = userService.registerNewUserAccount(user);
+            return ResponseEntity.ok(registered);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
 }

@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>LogIn</title>
+    <title>Cadastro</title>
     <link rel="shortcut icon" href="img/LogoTripTaker.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,6 @@
 <body>
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary-color" id="navbar">
-    <!-- Conteúdo da Navbar aqui -->
     <div class="container py-3">
         <a href="#" class="navbar-brand primary-color">
             <img src="img/logo.png" alt="Logo">
@@ -39,23 +38,29 @@
     </div>
 </nav>
 
-
-
-<!-- Formulário de Login -->
+<!-- Formulário de Cadastro -->
 <div class="container py-3">
-    <form id="loginForm" class="login-container">
-        <!-- Campos de usuário e senha -->
+    <form id="signupForm" class="login-container">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
         <div class="form-group">
             <label for="username">Usuário</label>
             <input type="text" class="form-control" id="username" name="username" required>
         </div>
+
+        <div class="form-group">
+            <label for="cpf">CPF</label>
+            <input type="text" class="form-control" id="cpf" name="cpf" required>
+        </div>
+
         <div class="form-group">
             <label for="password">Senha</label>
             <input type="password" class="form-control" id="password" name="password" required>
         </div>
-        <button type="submit" class="btn btn-primary">Entrar</button>
-        <!-- Botão de Cadastro -->
-        <a href="cadastro.html" class="btn btn-secondary mt-2">Cadastre-se</a>
+
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
     </form>
 </div>
 
@@ -84,6 +89,6 @@
 </footer>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script/login.js"></script>
+<script src="script/cadastro.js"></script>
 </body>
 </html>
