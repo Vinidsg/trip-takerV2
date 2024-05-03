@@ -1,5 +1,7 @@
 package com.senac.tripTaker.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.senac.tripTaker.model.Trip;
 import com.senac.tripTaker.service.TripService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,12 +9,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
 public class TripController {
+
+    private final ObjectMapper mapper = new ObjectMapper();
 
     private final TripService tripService;
 
@@ -21,9 +26,15 @@ public class TripController {
         this.tripService = tripService;
     }
 
+    @CrossOrigin("/*")
     @PostMapping("/trips")
-    public ResponseEntity<Trip> createTrip(@RequestBody Trip trip) {
+    public ResponseEntity<Trip> createTrip(@RequestParam("data") String data,
+                                           @RequestParam(value = "files", required = false) MultipartFile files)  {
+
         try {
+            var trip = mapper.readValue(data, Trip.class);
+            String filepath = tripService.saveImage(files);
+            trip.setImage(filepath);
             Trip createdTrip = tripService.createTrip(trip);
             return new ResponseEntity<>(createdTrip, HttpStatus.CREATED);
         } catch (Exception e) {
