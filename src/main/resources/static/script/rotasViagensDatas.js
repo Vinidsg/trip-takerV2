@@ -70,7 +70,7 @@ function fetchTrips() {
                                             </div>   
                                         </div>
                                         
-                                         <div class="container-button"><button href="#" class="buttonAgendar" id="loginBtn">Agendar</button></div>
+                                         <div class="container-button"><a href="http://localhost:8080/descricaoViagem.html?id=${trip.id}" class="buttonAgendar" id="loginBtn">Agendar</a></div>
                                          
                                     </div>
                                 </div>

@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class TripController {
@@ -42,6 +43,17 @@ public class TripController {
         }
     }
 
+    @GetMapping("/trip_id/{id}")
+    public ResponseEntity findTripById(@PathVariable Long id){
+        Optional<Trip> trip = tripService.findTripById(id);
+
+        if (trip.isPresent()){
+            return ResponseEntity.ok(trip);
+        } else {
+            return ResponseEntity.badRequest().body("Trip não encontrada");
+        }
+    }
+
 
     @GetMapping("/trip_list")
     public ResponseEntity<List<Trip>> listAllTrips() {
@@ -53,5 +65,6 @@ public class TripController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
 
 }

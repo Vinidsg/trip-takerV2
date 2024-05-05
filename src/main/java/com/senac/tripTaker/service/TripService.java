@@ -37,4 +37,5 @@ public class TripService {
     public Trip updateTrip(Trip trip) {
         return tripRepository.save(trip);
     }
+
 }
