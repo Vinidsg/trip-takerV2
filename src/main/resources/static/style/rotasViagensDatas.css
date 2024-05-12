@@ -150,20 +150,29 @@ margin-top:100px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none !important;
 }
 
 .buttonAgendar:hover {
     background-color: #0D1E30;
     color: #FFFFFF;
+    text-decoration: none;
 }
 
 .buttonAgendar:active {
     background-color: #0D1E30;
     color: #FFFFFF;
+    text-decoration: none;
 }
 
 .container-button{
     padding-left: 20vw;
+}
+.container-button .buttonAgendar {
+    text-decoration: none;
+}
+.container-button a {
+    text-decoration: none;
 }
 
 
@@ -198,4 +207,8 @@ margin-top:100px;
 .second-container{
     display: flex;
     flex-direction: row;
+}
+
+.a {
+    text-decoration: none;
 }

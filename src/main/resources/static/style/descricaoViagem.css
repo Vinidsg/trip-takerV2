@@ -63,8 +63,8 @@
 #table-price button{
     border-radius: 300px;
     width: 200px;
-    justify-content: center;
     margin-left: 150px;
+    margin-top: 10px;
 
 }
 
@@ -107,7 +107,12 @@
     margin-top: 30px;
     width: 300px;
 }
-
+.fecharBtn {
+    /* Adicione aqui os estilos desejados */
+    color: #060f18; /* Exemplo de estilo */
+    font-size: 15px; /* Exemplo de estilo */
+    width: 60px !important;
+}
 
 
 /* Estilos específicos para cada tela */
@@ -197,6 +202,8 @@
 
     #table-price button {
         margin-left: 82px;
+        margin-top: 10px;
+
     }
 }
 
