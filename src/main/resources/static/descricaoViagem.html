@@ -103,9 +103,11 @@
             <label type="number" inputmode="numeric" name="vlrUnitario" id="vlrUnitario"></label>
         </div>
         <div class="col-md-2 col-sm-2 col-0 card text-card-2 card-only-text border-transp"></div>
+
         <div class="col-md-4 col-sm-2 col-0 card text-card-2 card-only-text border-transp">
             <button id="reservarBtn" href="#" class="nav-link bg-third-color-dv secondary-color-dv">Reservar</button>
         </div>
+
         <!-- Modal -->
         <div class="modal fade" id="reservarModal" tabindex="-1" role="dialog" aria-labelledby="reservarModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -114,16 +116,43 @@
                         <div href="#" class="navbar-brand primary-color">
                             <img src="/Images/logo.png" alt=""/>
                         </div>
+                        <button type="button" data-dismiss="modal" class="fecharBtn" aria-label="Close" id="fecharBtn">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+
                     </div>
                     <div class="modal-body">
-                        <p>Entre em contato através do número (11)5555-6666</p>
+                        <form id="reservarForm" action="https://formsubmit.co/matheusslima676@gmail.com" method="POST">
+                            <input type="hidden" name="reservationNumber" id="reservationNumber"> <!-- Campo oculto para armazenar o número de reserva -->
+                            <div class="form-group">
+                                <label for="nome">Nome:</label>
+                                <input type="name" class="form-control" id="nome" name="nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="sobrenome">Sobrenome:</label>
+                                <input type="name" class="form-control" id="sobrenome" name="sobrenome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone">Telefone:</label>
+                                <input type="tel" class="form-control" id="telefone" name="telefone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail:</label>
+                                <input type="email" class="form-control"  id="email" name="email" required>
+                            </div>
+                            <button type="submit" class="btn btn-secondary bg-third-color-dv secondary-color-dv" >Enviar</button>
+                            <input type="text" name="_honey" style="display:none">
+                            <input  type="hidden" name="_captcha" value="false">
+
+                            <input type="hidden" name="_next" value="http://localhost:8080/descricaoViagem.html">
+                        </form>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary bg-third-color-dv secondary-color-dv" id="fecharBtn">Fechar</button>
-                    </div>
+
                 </div>
             </div>
         </div>
+
+
     </div>
 </div>
 

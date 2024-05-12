@@ -30,12 +30,32 @@ $(document).ready(function() {
     $('#reservarBtn').click(function() {
         $('#reservarModal').modal('show');
     });
+
     $('#fecharBtn').click(function() {
         $('#reservarModal').modal('hide');
     });
+
+    $('#reservarForm').submit(function(event) {
+
+        var numeroReserva = gerarNumeroReserva();
+        document.getElementById('reservationNumber').value = numeroReserva;
+
+        document.getElementById('mensagemEnviado').style.display = 'block';
+        document.getElementById('enviarBtn').style.display = 'none';
+
+        event.preventDefault();
+
+        return false;
+    });
 });
 
-// <!-- Script do login -->
+
+function gerarNumeroReserva() {
+    return Math.floor(1000 + Math.random() * 9000);
+}
+
+
+
 document.getElementById("loginBtn").addEventListener("click", function() {
     window.location.href = "/login";
 });
