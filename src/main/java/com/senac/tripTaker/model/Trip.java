@@ -107,4 +107,19 @@ public class Trip {
     public void setImage(String image) {
         this.image = image;
     }
+
+    @Override
+    public String toString() {
+        return "Trip{" +
+                "id=" + id +
+                ", local='" + local + '\'' +
+                ", qtdPessoas=" + qtdPessoas +
+                ", guiaResponsavel='" + guiaResponsavel + '\'' +
+                ", valorUnitario=" + valorUnitario +
+                ", dataInicio='" + dataInicio + '\'' +
+                ", dataFinal='" + dataFinal + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", image='" + image + '\'' +
+                '}';
+    }
 }

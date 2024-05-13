@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             if (response.ok) {
-                window.location.href = 'LOGINSUCESSO.html'; // Redireciona para a página de sucesso
+                window.location.href = 'gerenciar.html'; // Redireciona para a página de sucesso
             } else {
                 const message = await response.text();
                 alert('Falha no login: ' + message);

@@ -50,6 +50,6 @@ public class TripService {
         String fileName = currentTime.toString().concat("-").concat(Objects.requireNonNull(file.getOriginalFilename()).replace(" ", ""));
         Files.copy(file.getInputStream(), Path.of("src/main/resources/static/imgPath/" + fileName),
                 StandardCopyOption.REPLACE_EXISTING);
-        return "src/main/resources/static/imgPath/" + fileName;
+        return "imgPath/" + fileName;
     }
 }
