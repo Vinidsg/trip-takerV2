@@ -16,7 +16,6 @@
 
     <link rel="stylesheet" href="style/home.css">
     <link rel="stylesheet" href="style/gerenciarRotas.css">
-    <script src="script/createEditTrip.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </head>
@@ -32,7 +31,7 @@
       </div>
     </div>
 
-    <form method="post" enctype="multipart/form-data">
+    <form id="formCreate" method="post">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6 col-md-8 col-sm-10 formulario">
@@ -74,12 +73,13 @@
                   <input class="form-control" type="file" id="formFile" name="formFile" accept="image/*" multiple>
               </div>
             <div class="mb-3 text-center">
-              <button type="submit" class="btn btn-primary btnSalvar"  onclick="salvar()">Salvar</button>
+              <button type="submit" class="btn btn-primary btnSalvar">Salvar</button>
               <button type="button" class="btn btn-secondary btnCancelar" onclick="redirecionarParaListar()">Cancelar</button>
             </div>
           </div>
         </div>
       </div>
     </form>
+    <script src="script/createEditTrip.js"></script>
 </body>
 </html>

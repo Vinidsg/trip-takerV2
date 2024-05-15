@@ -17,7 +17,6 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin("*")
 public class TripController {
 
     private final ObjectMapper mapper = new ObjectMapper();
@@ -27,22 +26,6 @@ public class TripController {
     @Autowired
     public TripController(TripService tripService) {
         this.tripService = tripService;
-    }
-
-    @PostMapping("/trips/create")
-    public ResponseEntity<Trip> createTrip(@RequestParam() String data,
-                                           @RequestParam(value = "files", required = false) MultipartFile files)  {
-
-        try {
-            var trip = mapper.readValue(data, Trip.class);
-            String filepath = tripService.saveImage(files);
-            trip.setImage(filepath);
-            Trip createdTrip = tripService.createTrip(trip);
-            return new ResponseEntity<>(createdTrip, HttpStatus.CREATED);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
     }
 
     @PatchMapping(path = "/trips/edit/{id}")
@@ -103,6 +86,22 @@ public class TripController {
         } catch (Exception e) {
             e.printStackTrace();
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @PostMapping("/create")
+    public ResponseEntity<Trip> createTrip(@RequestParam String data,
+                                           @RequestParam(value = "files", required = false) MultipartFile files)  {
+
+        try {
+           var trip = mapper.readValue(data, Trip.class);
+            String filepath = tripService.saveImage(files);
+            trip.setImage(filepath);
+            Trip createdTrip = tripService.createTrip(trip);
+            return new ResponseEntity<>(createdTrip, HttpStatus.CREATED);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
