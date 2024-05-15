@@ -30,7 +30,7 @@ public class TripController {
     }
 
     @PostMapping("/trips/create")
-    public ResponseEntity<Trip> createTrip(@RequestParam("data") String data,
+    public ResponseEntity<Trip> createTrip(@RequestParam() String data,
                                            @RequestParam(value = "files", required = false) MultipartFile files)  {
 
         try {

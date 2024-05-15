@@ -10,7 +10,8 @@ function redirecionarParaListar() {
 
 function salvar() {
 
-    const data = {
+    let data = {
+        qtdPessoas: document.querySelector("#qtdPessoas").value,
         local: document.querySelector("#local").value,
         guiaResponsavel: document.querySelector("#guiaResponsavel").value,
         valorUnitario: parseFloat(document.querySelector("#vlrUnitario").value),
@@ -23,9 +24,6 @@ function salvar() {
 
     var formData = new FormData();
 
-    formData.append("data", JSON.stringify(data));
-    formData.append("files", files);
-
     console.log(files)
 
     console.log(urlParams)
@@ -35,8 +33,8 @@ function salvar() {
 
     if(urlParams != 0) {
 
-        let objetoPatch = criarObjetoPatch(Tripdata);
-        formData.append("data", JSON.stringify(objetoPatch));
+        data = criarObjetoPatch(data);
+        formData.append("data", JSON.stringify(data));
 
         fetch(`/trips/edit/${id}`, {
             method: 'PATCH',
@@ -53,6 +51,8 @@ function salvar() {
         });
 
     } else {
+        formData.append("data", JSON.stringify(data));
+        formData.append("files", files);
 
         fetch(`/trips/create`, {
             method: 'POST',
