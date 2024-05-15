@@ -31,7 +31,7 @@
       </div>
     </div>
 
-    <form id="formCreate" method="post">
+    <form id="formCreate" method="post" enctype="multipart/form-data">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6 col-md-8 col-sm-10 formulario">
@@ -73,7 +73,7 @@
                   <input class="form-control" type="file" id="formFile" name="formFile" accept="image/*" multiple>
               </div>
             <div class="mb-3 text-center">
-              <button type="submit" class="btn btn-primary btnSalvar">Salvar</button>
+              <button type="button" class="btn btn-primary btnSalvar" onclick="salvar()">Salvar</button>
               <button type="button" class="btn btn-secondary btnCancelar" onclick="redirecionarParaListar()">Cancelar</button>
             </div>
           </div>
