@@ -15,7 +15,7 @@ function carregarViagens() {
                 card.classList.add('col-md-4');
                 card.innerHTML = `
                     <div class="card mb-3">
-                        <a href="/createEditTrip/${trip.id}">
+                        <a href="/createEditTrip.html?id=${trip.id}">
                             <img src="${trip.image}" alt="Imagem da Viagem" class="card-img-top">
                         </a>
                         <div class="card-body">
