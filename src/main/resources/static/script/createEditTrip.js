@@ -24,23 +24,15 @@ function salvar() {
 
     var formData = new FormData();
 
-    console.log(files)
-
-    console.log(urlParams)
-    console.log(id)
-    console.log(formData)
-
-
     if(urlParams != 0) {
 
         let objetoPatch = criarObjetoPatch(trip);
         formData.append("data", JSON.stringify(objetoPatch));
+        formData.append("files", files);
+        console.log(formData)
 
-        fetch(`/trips/edit/${id}`, {
+        fetch(`http://localhost:8080/trips/edit/${id}`, {
             method: 'PATCH',
-            headers: {
-                'Content-Type': 'application/json',
-            },
             body: formData
         }).then(function (response) {
             if (response.status === 200) {
@@ -54,7 +46,7 @@ function salvar() {
         formData.append("data", JSON.stringify(trip));
         formData.append("files", files);
 
-        fetch(`/trips/create`, {
+        fetch(`http://localhost:8080/create`, {
             method: 'POST',
             body: formData,
         }).then(function (response) {

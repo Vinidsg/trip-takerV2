@@ -29,7 +29,7 @@ public class TripController {
     }
 
     @PatchMapping(path = "/trips/edit/{id}")
-    public ResponseEntity<Trip> editTrip(@PathVariable Long id, @RequestParam("data") String data,
+    public ResponseEntity<Trip> editTrip(@PathVariable Long id, @RequestParam() String data,
                                          @RequestParam(value = "files", required = false) MultipartFile files) {
 
         try {

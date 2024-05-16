@@ -20,13 +20,45 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </head>
 <body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-lg fixed-top bg-primary-color" id="navbar">
+    <div class="container py-3">
+        <a href="#" class="navbar-brand primary-color">
+            <img src="img/logo.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-items" aria-controls="navbar-items" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-items">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a href="home.html" class="nav-link primary-color">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="RotasViagensDatas.html" class="nav-link active primary-color" aria-current="page">Rotas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="sobre.html" class="nav-link primary-color">Sobre</a>
+                </li>
+            </ul>
+            <a>
+                <button class="buttonLogin btn-primary" id="loginBtn">Login</button>
+            </a>
+        </div>
+    </div>
+</nav>
 
-    <!-- Navbar here -->
+<div class="titlePage">
+    <h1>Rotas, Viagens e Datas</h1>
+</div>
 
+<div class="container-principal" id="tripsContainer">
+    <!-- Dynamic trip data will be loaded here using JavaScript -->
+</div>
+<div>
     <div class="container tituloPg">
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-8 col-sm-10">
-          <h2 class="text-center">Cadastro de Viagem/Rota</h2>
+          <h2 class="text-center">Cadastro de Viaem/Rota</h2>
         </div>
       </div>
     </div>
@@ -80,6 +112,30 @@
         </div>
       </div>
     </form>
+</div>
+<footer class="container-fluid bg-primary-color mt-auto" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12" id="footer-top">
+                <div class="row justify-content-between">
+                    <div class="col-4">
+                        <img src="img/logo.png" alt="Logo" class="logoIMG">
+                    </div>
+                    <div class="col-4" id="social-icons">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-youtube"></i>
+                        <i class="bi bi-twitter"></i>
+                    </div>
+                    <div class="col-4" id="arrow-up">
+                        <i class="bi bi-arrow-up-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
     <script src="script/createEditTrip.js"></script>
 </body>
 </html>

@@ -16,8 +16,9 @@ axios.get('/trip_id/' + id)
         document.getElementById('dtInicio').innerText = data.dataInicio;
         document.getElementById('dtFinal').innerText = data.dataFinal;
         document.getElementById('vlrUnitario').innerText = `R$ ${data.valorUnitario}`;
-
+        document.getElementById('image').src = data.image;
     })
+
     .catch(function (error){
         console.error(error);
         console.log("Deu erro")
