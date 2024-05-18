@@ -126,11 +126,11 @@
                             <input type="hidden" name="reservationNumber" id="reservationNumber"> <!-- Campo oculto para armazenar o número de reserva -->
                             <div class="form-group">
                                 <label for="nome">Nome:</label>
-                                <input type="name" class="form-control" id="nome" name="nome" required>
+                                <input type="text" class="form-control" id="nome" name="nome" required>
                             </div>
                             <div class="form-group">
                                 <label for="sobrenome">Sobrenome:</label>
-                                <input type="name" class="form-control" id="sobrenome" name="sobrenome" required>
+                                <input type="text" class="form-control" id="sobrenome" name="sobrenome" required>
                             </div>
                             <div class="form-group">
                                 <label for="telefone">Telefone:</label>
@@ -138,15 +138,19 @@
                             </div>
                             <div class="form-group">
                                 <label for="email">E-mail:</label>
-                                <input type="email" class="form-control"  id="email" name="email" required>
+                                <input type="email" class="form-control" id="email" name="email" required>
                             </div>
-                            <button type="submit" class="btn btn-secondary bg-third-color-dv secondary-color-dv" >Enviar</button>
+                            <button type="submit" id="submitBtn" class="btn btn-secondary bg-third-color-dv secondary-color-dv">Enviar</button>
                             <input type="text" name="_honey" style="display:none">
-                            <input  type="hidden" name="_captcha" value="false">
-
-                            <input type="hidden" name="_next" value="http://localhost:8080/descricaoViagem.html">
+                            <input type="hidden" name="_captcha" value="false">
                         </form>
                     </div>
+
+                    <div id="confirmationPopup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); padding:20px; background-color:#fff; border:1px solid #ccc; box-shadow:0 0 10px rgba(0,0,0,0.1); z-index:1000;">
+                        <p>Mensagem enviada com sucesso!</p>
+                        <button id="closePopupBtn" class="btn btn-secondary">Fechar</button>
+                    </div>
+
 
                 </div>
             </div>
