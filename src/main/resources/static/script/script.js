@@ -24,6 +24,7 @@ function carregarViagens() {
                             </form>
                         </div>
                     </div>
+                    <div class="padding-top"></div>
                 `;
                 container.appendChild(card);
             });

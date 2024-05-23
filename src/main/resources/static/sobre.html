@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Trip Taker - Sobre</title>
-    <link rel="shortcut icon" th:href="@{/img/LogoTripTaker.ico}" type="image/x-icon">
+    <title>Trip Taker - Início</title>
+    <link rel="shortcut icon" href="img/LogoTripTaker.ico" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,16 +13,40 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-    <link rel="stylesheet" th:href="@{/style/sobre.css}">
-    
+    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/sobre.css">
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <!-- Navbar content here -->
-    
-    <!-- Sections for 'História', 'Missão', 'Torne-se Um Guia', and 'Contate-nos' -->
-    <section class="about section-padding-1 Historia">
+<nav class="navbar navbar-expand-lg fixed-top bg-primary-color" id="navbar">
+    <div class="container py-3">
+        <a href="#" class="navbar-brand primary-color">
+            <img src="img/logo.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-items" aria-controls="navbar-items" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-items">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a href="home.html" class="nav-link primary-color">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="RotasViagensDatas.html" class="nav-link primary-color" aria-current="page">Rotas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="sobre.html" class="nav-link primary-color active">Sobre</a>
+                </li>
+            </ul>
+            <a href="login.html">
+                <button class="buttonLogin btn-primary" id="loginBtn">Login</button>
+            </a>
+        </div>
+    </div>
+</nav>
+    <section class="about section-padding-1 historia">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -34,11 +58,68 @@
             </div>
         </div>
     </section>
+    <section class="about section-padding-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="about-text">
+                        <h1 class="text-start">Missão</h1>
+                        <p>Nossa missão é proporcionar aos viajantes uma maneira única de explorar os destinos, mergulhar em diferentes culturas e criar laços autênticos com as comunidades locais. Acreditamos que as melhores experiências de viagem são aquelas em que você se conecta verdadeiramente com o local que está visitando. Assim, trabalhamos arduamente para oferecer itinerários personalizados, oportunidades de interação com os moradores e a descoberta de lugares fora do comum, tudo isso com a orientação de guias especializados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Similar structure for 'Missão', 'Torne-se Um Guia', and 'Contate-nos' sections -->
-    <!-- Omitting for brevity, follow the structure from 'História' -->
+    <section class="about section-padding-3">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="about-text text-black">
+                        <h1 class="text-start">Torne-se Um Guia</h1>
+                        <p>Você é um entusiasta das viagens e possui um amor profundo pelo seu destino local? Junte-se a nós como um guia da Trip Taker! Se você é apaixonado por compartilhar histórias fascinantes, mostrar os segredos escondidos de sua cidade e ajudar os visitantes a vivenciarem experiências autênticas, estamos à procura de você. Como guia da Trip Taker, você terá a oportunidade de fazer parte de uma comunidade global, conhecer pessoas interessantes e, o mais importante, influenciar positivamente as experiências de viagem dos nossos clientes. Entre em contato conosco para saber mais sobre como se tornar um guia da Trip Taker.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Footer content here -->
+    <section class="about section-padding-3">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="about-text text-black">
+                        <h1 class="text-start">Contate-nos</h1>
+                        <p>Estamos aqui para ajudar e responder a todas as suas perguntas. Se você tiver dúvidas sobre nossos pacotes de viagem, desejar informações adicionais sobre um destino específico ou quiser entrar em contato com nossa equipe de suporte, fique à vontade para nos contatar. Nossa equipe está disponível para fornecer assistência personalizada e orientação, garantindo que sua experiência de viagem seja tranquila e gratificante. Você pode nos encontrar por meio do telefone, e-mail ou preenchendo o formulário de contato em nosso site. Estamos ansiosos para ouvir você!</p>
+                        <p>Bem-vindo à família da Trip Taker, onde cada viagem é uma jornada única e memorável. Permita-nos guiá-lo em uma aventura extraordinária e descubra o mundo através de uma nova perspectiva.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="padding-top">
+<footer class="container-fluid bg-primary-color mt-auto" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12" id="footer-top">
+                <div class="row justify-content-between">
+                    <div class="col-4">
+                        <img src="img/logo.png" alt="Logo" class="logoIMG">
+                    </div>
+                    <div class="col-4" id="social-icons">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-youtube"></i>
+                        <i class="bi bi-twitter"></i>
+                    </div>
+                    <div class="col-4" id="arrow-up">
+                        <i class="bi bi-arrow-up-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

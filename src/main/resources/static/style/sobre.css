@@ -83,11 +83,13 @@
    }
 
 
-   .Historia{
-        margin-top:100px;
+   .historia{
+        padding-top:120px;
    }
 
-
+   .padding-top{
+       padding-top: 50px;
+   }
 
    .logoIMG {
        width: 80px;
